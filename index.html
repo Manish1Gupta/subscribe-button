@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe Button</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+
+        .subscribe-btn {
+            background: #ff4757;
+            color: #fff;
+            border: none;
+            padding: 15px 35px;
+            font-size: 18px;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .subscribe-btn:hover {
+            background: #2ed573;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .subscribe-btn:active {
+            transform: scale(0.95);
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #fff;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="btn-container">
+    <button class="subscribe-btn" onclick="subscribe()">Subscribe</button>
+    <div id="msg" class="message">Thank you for subscribing! 🎉</div>
+</div>
+
+<script>
+    function subscribe() {
+        const message = document.getElementById('msg');
+        message.style.display = 'block';
+
+        // Hide message after 3 seconds
+        setTimeout(() => {
+            message.style.display = 'none';
+        }, 3000);
+    }
+</script>
+
+</body>
+</html>
